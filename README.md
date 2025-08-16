@@ -26,17 +26,12 @@ uzence-assignment/
 │
 ├─ src/
 │  ├─ components/
-│  │  ├─ InputField/
-│  │  │  ├─ InputField.tsx
-│  │  │  ├─ InputField.stories.tsx
-│  │  │  └─ index.ts
-│  │  │
-│  │  ├─ DataTable/
-│  │  │  ├─ DataTable.tsx
-│  │  │  ├─ DataTable.stories.tsx
-│  │  │  └─ index.ts
-│  │  │
-│  │  └─ index.ts               # barrel export
+│  │ 
+│  │   ├─ InputField.tsx
+│  │   ├─ InputField.stories.tsx
+│  │   ├─ DataTable.tsx
+│  │   ├─ DataTable.stories.tsx
+│  │               
 │  │
 │  ├─ App.tsx                 
 │  ├─ main.tsx                 
