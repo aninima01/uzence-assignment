@@ -15,6 +15,9 @@ The project is deployed with **Chromatic**, making it easy to preview components
 👉 [View Storybook on Chromatic](https://68a0c561b7dea9f765862102-gbfmgsoqqr.chromatic.com/)
 
 ## 📂 Folder Structure
+## 📂 Folder Structure
+
+```bash
 uzence-assignment/
 ├─ .storybook/                  
 │  ├─ main.ts
@@ -23,14 +26,17 @@ uzence-assignment/
 │
 ├─ src/
 │  ├─ components/
-│  │  
-│  │  ├─ InputField.tsx
-│  │  ├─ InputField.stories.tsx
-│  │  ├─ DataTable.tsx
-│  │  ├─ DataTable.stories.tsx
-│  │           
-│  │ 
-│  │             
+│  │  ├─ InputField/
+│  │  │  ├─ InputField.tsx
+│  │  │  ├─ InputField.stories.tsx
+│  │  │  └─ index.ts
+│  │  │
+│  │  ├─ DataTable/
+│  │  │  ├─ DataTable.tsx
+│  │  │  ├─ DataTable.stories.tsx
+│  │  │  └─ index.ts
+│  │  │
+│  │  └─ index.ts               # barrel export
 │  │
 │  ├─ App.tsx                 
 │  ├─ main.tsx                 
@@ -47,7 +53,7 @@ uzence-assignment/
 ├─ tailwind.config.js
 ├─ postcss.config.js
 └─ README.md
-
+```
 
 
 ## 🛠️ Setup Instructions
