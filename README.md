@@ -1,69 +1,77 @@
-# React + TypeScript + Vite
+ 📚 Storybook Components
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains reusable **React + TypeScript** components documented with **Storybook**.  
 
-Currently, two official plugins are available:
+Storybook is a frontend workshop for building UI components and pages in isolation. Thousands of teams use it for UI development, testing, and documentation. It's open source and free.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+It currently includes two main components:  
 
-## Expanding the ESLint configuration
+- **InputField** → A flexible input component with multiple states & variants  
+- **DataTable** → A sortable, selectable table with loading/empty states  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+The project is deployed with **Chromatic**, making it easy to preview components online. 
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Live Preview
+👉 [View Storybook on Chromatic](https://68a0c561b7dea9f765862102-gbfmgsoqqr.chromatic.com/)
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 📂 Folder Structure
+storybook-components/
+├── .storybook/ # Storybook config
+│ ├── main.ts
+│ ├── preview.ts
+│ └── manager.ts
+├── src/ # Components
+│ ├── components/
+│ │ ├── InputField/
+│ │ │ ├── InputField.tsx
+│ │ │ ├── InputField.stories.tsx
+│ │ │ └── InputField.test.tsx (optional)
+│ │ └── DataTable/
+│ │ ├── DataTable.tsx
+│ │ ├── DataTable.stories.tsx
+│ │ └── DataTable.test.tsx (optional)
+│ └── index.ts # Component exports
+├── package.json
+├── tsconfig.json
+└── README.md
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Setup Instructions
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Follow these steps to set up the project locally and deploy it.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 1. Clone the repository
+
+git clone https://github.com/your-username/storybook-components.git
+cd storybook-components
+
+### 2. Install dependencies
+
+Make sure you have Node.js (>=16) installed.
+
+npm install
+
+### 3. Run Storybook locally
+
+Start Storybook on http://localhost:6006
+npm run storybook
+
+### 4. Build Storybook
+
+npm run build-storybook
+
+### 5. Deploy with Chromatic
+Chromatic automatically builds and hosts your Storybook.
+Get your Project Token from Chromatic setup.
+Add it to your local environment:
+
+npx chromatic --project-token=<YOUR_PROJECT_TOKEN>
+
+Or add a script in package.json for convenience:
+
+"scripts": {
+  "chromatic": "chromatic --project-token=<YOUR_PROJECT_TOKEN>"
+}
+Now run:
+npm run chromatic
+Chromatic will return a unique shareable URL for your Storybook.
