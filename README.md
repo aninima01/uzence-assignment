@@ -14,7 +14,7 @@ The project is deployed with **Chromatic**, making it easy to preview components
 ## 🚀 Live Preview
 👉 [View Storybook on Chromatic](https://68a0c561b7dea9f765862102-gbfmgsoqqr.chromatic.com/)
 
-## 📂 Folder Structure
+
 ## 📂 Folder Structure
 
 ```bash
@@ -53,7 +53,7 @@ uzence-assignment/
 ├─ tailwind.config.js
 ├─ postcss.config.js
 └─ README.md
-```
+
 
 
 ## 🛠️ Setup Instructions
@@ -94,3 +94,4 @@ Or add a script in package.json for convenience:
 Now run:
 npm run chromatic
 Chromatic will return a unique shareable URL for your Storybook.
+```
