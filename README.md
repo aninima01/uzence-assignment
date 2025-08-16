@@ -15,25 +15,39 @@ The project is deployed with **Chromatic**, making it easy to preview components
 👉 [View Storybook on Chromatic](https://68a0c561b7dea9f765862102-gbfmgsoqqr.chromatic.com/)
 
 ## 📂 Folder Structure
-storybook-components/
-├── .storybook/ # Storybook config
-│ ├── main.ts
-│ ├── preview.ts
-│ └── manager.ts
-├── src/ # Components
-│ ├── components/
-│ │ ├── InputField/
-│ │ │ ├── InputField.tsx
-│ │ │ ├── InputField.stories.tsx
-│ │ │ └── InputField.test.tsx (optional)
-│ │ └── DataTable/
-│ │ ├── DataTable.tsx
-│ │ ├── DataTable.stories.tsx
-│ │ └── DataTable.test.tsx (optional)
-│ └── index.ts # Component exports
-├── package.json
-├── tsconfig.json
-└── README.md
+uzence-assignment/
+├─ .storybook/                  
+│  ├─ main.ts
+│  ├─ preview.ts
+│  └─ tsconfig.json
+│
+├─ src/
+│  ├─ components/
+│  │  
+│  │  ├─ InputField.tsx
+│  │  ├─ InputField.stories.tsx
+│  │  ├─ DataTable.tsx
+│  │  ├─ DataTable.stories.tsx
+│  │           
+│  │ 
+│  │             
+│  │
+│  ├─ App.tsx                 
+│  ├─ main.tsx                 
+│  ├─ index.css                 
+│  └─ vite-env.d.ts
+│
+├─ public/
+│  └─ favicon.svg
+│
+├─ .gitignore
+├─ package.json
+├─ tsconfig.json
+├─ tsconfig.node.json
+├─ tailwind.config.js
+├─ postcss.config.js
+└─ README.md
+
 
 
 ## 🛠️ Setup Instructions
@@ -42,8 +56,7 @@ Follow these steps to set up the project locally and deploy it.
 
 ### 1. Clone the repository
 
-git clone https://github.com/your-username/storybook-components.git
-cd storybook-components
+git clone https://github.com/aninima01/uzence-assignment.git
 
 ### 2. Install dependencies
 
